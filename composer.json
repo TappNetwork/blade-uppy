@@ -1,0 +1,80 @@
+{
+    "name": "tapp/blade-uppy",
+    "description": "Uppy Blade components for Laravel",
+    "keywords": [
+        "tapp network",
+        "blade",
+        "component",
+        "laravel-blade",
+        "upload",
+        "uploader",
+        "uppy",
+        "s3",
+        "s3-multipart",
+        "xhr",
+        "tus",
+        "multipart upload",
+        "transloadit"
+    ],
+    "homepage": "https://github.com/TappNetwork/blade-uppy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tapp Network",
+            "email": "steve@tappnetwork.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Tapp Network",
+            "email": "andreia.bohner@tappnetwork.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "spatie/laravel-package-tools": "^1.1",
+        "illuminate/contracts": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.3",
+        "spatie/laravel-ray": "^1.9",
+        "vimeo/psalm": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tapp\\BladeUppy\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tapp\\BladeUppy\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tapp\\BladeUppy\\BladeUppyServiceProvider"
+            ],
+            "aliases": {
+                "BladeUppy": "Tapp\\BladeUppy\\BladeUppyFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
