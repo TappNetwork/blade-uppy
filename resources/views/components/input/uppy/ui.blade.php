@@ -1,7 +1,7 @@
 @aware([
     'instanceName' => 'uppyUpload',
     'uiOptions' => '{}',
-    'ui' => '',
+    'ui' => 'dashboard',
 ])
 
 {{ $instanceName }}.use({{ Str::of($ui)->camel()->ucfirst() }}, {{ $uiOptions }});
